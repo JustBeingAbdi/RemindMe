@@ -1,0 +1,32 @@
+{
+  "name": "reminder",
+  "version": "1.0.0",
+  "description": "Reminder",
+  "main": "index.ts",
+  "scripts": {
+    "test": "ts-node-dev --respawn --transpile-only --poll --debug ./index.ts",
+    "start": "ts-node-dev --respawn --transpile-only --poll --debug ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustBeingAbdi/Reminder.git"
+  },
+  "author": "Abdi Hassan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustBeingAbdi/Reminder/issues"
+  },
+  "homepage": "https://github.com/JustBeingAbdi/Reminder#readme",
+  "dependencies": {
+    "@types/ejs": "^3.0.6",
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18",
+    "path": "^0.12.7",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.2"
+  }
+}
