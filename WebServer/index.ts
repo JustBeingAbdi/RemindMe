@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-const express = require("express");
+import express from "express";
 import path from "path";
-const ejs = require("ejs");
-const path = require("path");
+import ejs from "ejs"
+
 
 export class Server {
 	public async init(): Promise<void> {
