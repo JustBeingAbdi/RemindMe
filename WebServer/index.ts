@@ -4,9 +4,12 @@ import path from "path";
 import ejs from "ejs"
 
 
+
 export class Server {
+    
 	public async init(): Promise<void> {
-		let app = express();
+        let app = express();
+		
 		
 		
 		
