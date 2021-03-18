@@ -1,256 +1,113 @@
-@charset "UTF-8";
-
 body {
-  background: #edf0f1;
-  padding: 80px 0 0 0;
+	background-color: rgb(1, 2, 2);
 }
 
-body, input, button {
-  font-family: 'Roboto', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat" !important;
+    
 }
 
-.noFill {
-  fill: none;
+p, div {
+    font-family: "Karla" !important;
+    
 }
-
-header {
-  width: 100%;
-  height: 80px;
-
-  position: fixed;
-  padding: 15px;
-  top: 0;
+shard {
+  background-color: chartreuse;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
   left: 0;
-  z-index: 5;
-
-  background: #25b99a;
-  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  background-color: rgb(0, 17, 255); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-header input {
-  width: 100%;
-  height: 50px;
-  float: left;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  text-indent: 18px;
-  padding: 0 60px 0 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px 25px 25px 5px;
-  border: 0px;
-  box-shadow: none;
-  outline: none;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-header input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-header input:-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-header input::-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-header input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-header button {
-  width: 50px;
-  height: 50px;
-
-  position:absolute;
-  top:15px;
-  right:15px;
-  z-index:2;
-
-  border-radius: 25px;
-  background: #fff;
-  border: 0px;
-  box-shadow: none;
-  outline: none;
-  cursor: pointer;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-header button svg {
-  width: 16px;
-  height: 16px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  margin: -8px 0 0 -8px;
-}
-
-header button svg .fill {
-  fill: #25b99a;
-}
-
-.container {
-  width: 100%;
-  float: left;
-  padding: 15px;
-}
-
-ul.todo {
-  width: 100%;
-  float: left;
-}
-
-ul.todo li {
-  width: 100%;
-  min-height: 50px;
-  float: left;
-  font-size: 14px;
-  font-weight: 500;
-  color: #444;
-  line-height: 22px;
-
-  background: #fff;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
-  margin: 0 0 10px 0;
-  padding: 14px 100px 14px 14px;
-  word-break: break-word;
-}
-
-ul.todo li:last-of-type {
-  margin: 0;
-}
-
-ul.todo li .buttons {
-  width: 100px;
-  height: 50px;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-ul.todo li .buttons button {
-  width: 50px;
-  height: 50px;
-  float: left;
-  background: none;
-  position: relative;
-  border: 0px;
-  box-shadow: none;
-  outline: none;
-  cursor: pointer;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-ul.todo li .buttons button:last-of-type:before {
-  content: '';
-  width: 1px;
-  height: 30px;
-  background: #edf0f1;
-
-  position: absolute;
-  top: 10px;
-  left: 0;
-}
-
-ul.todo li .buttons button svg {
-  width: 22px;
-  height: 22px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  margin: -11px 0 0 -11px;
-}
-
-ul.todo li .buttons button.complete svg {
-  border-radius: 11px;
-  border: 1.5px solid #25b99a;
-
-  transition: background 0.2s ease;
-}
-
-ul.todo#completed li .buttons button.complete svg {
-  background: #25b99a;
-  border: 0px;
-}
-
-ul.todo:not(#completed) li .buttons button.complete:hover svg {
-  background: rgba(37, 185, 154, 0.75);
-}
-
-ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
-  fill: #fff;
-}
-
-ul.todo#completed li .buttons button.complete svg .fill {
-  fill: #fff;
-}
-
-ul.todo li .buttons button svg .fill {
-  transition: fill 0.2s ease;
-}
-
-ul.todo li .buttons button.remove svg .fill {
-  fill: #c0cecb;
-}
-
-ul.todo li .buttons button.remove:hover svg .fill {
-  fill: #e85656;
-}
-
-ul.todo li .buttons button.complete svg .fill {
-  fill: #25b99a;
-}
-
-ul.todo#completed {
-  position: relative;
-  padding: 60px 0 0 0;
-}
-
-ul.todo#completed:before {
-  content: '';
-  width: 150px;
-  height: 1px;
-  background: #d8e5e0;
-
-  position: absolute;
-  top: 30px;
-  left: 50%;
-
-  margin: 0 0 0 -75px;
-}
-
-ul.todo#todo:empty:after {
-  content: 'You have nothing to-do!';
-  margin: 15px 0 0 0;
-}
-
-ul.todo#completed:empty:after {
-  content: 'You have yet to complete any tasks.';
-}
-
-ul.todo#todo:after,
-ul.todo#completed:after {
-  width: 100%;
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
   display: block;
-  text-align: center;
-  font-size: 12px;
-  color: #aaa;
+  transition: 0.3s;
 }
 
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
