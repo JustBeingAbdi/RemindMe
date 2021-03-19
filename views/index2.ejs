@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            var tdata = (localStorage.getItem("token")) || (localStorage.setItem("token", false));
+            function Token() {
+    let urlparams = new URLSearchParams(window.location.search);
+    let tok = urlparams.get("token");
+    if(localStorage.getItem("token") !== 'false') {
+        if(tok) return;
+        window.location.assign(`/?token=${localStorage.getItem("token")}`);
+    }
+    let request = new XMLHttpRequest();
+    request.open("GET", "/token/generate");
+    request.send();
+
+    setTimeout(function() {
+        localStorage.setItem("token", request.response);
+        if(tok) return;
+        window.location.assign(`/?token=${request.response}`);
+    }, 1500)
+}
+Token();
+        </script>
+    </body>
+</html>

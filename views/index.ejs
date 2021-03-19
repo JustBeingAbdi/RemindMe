@@ -14,7 +14,8 @@
     <h1>Welcome to RemindMe</h1>
 
 
-    <button onclick="Notify()" class="btn btn-light">Grant Access to notify you.</button>
+    <button id="notify" onclick="Notify()" class="btn btn-light">Grant Access to notify you.</button>
+    <p id="nerror"></p>
     
 
 
@@ -29,6 +30,22 @@
             <option hidden value="mobile-app">Notified Via Mobile App (Coming soon)</option>
         </select>
     </form>
+
+
+
+
+    <div id="reminders" class="container text-center text-light" style="padding-top: 110px; padding-bottom: 20px;">
+         <% if(reminders) { %>
+        <% reminders.map(x => { %>
+            <p>Name: <%= x.name %> Method: <%= x.method %></p>
+            <form id="<%= x.name %>">
+                <button type="submit" class="btn btn-light">Delete</button>
+            </form>
+            <% }) %>
+
+            <% } %>
+
+    </div>
 
 
             
